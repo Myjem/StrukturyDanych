@@ -1,6 +1,6 @@
 struct node_double{
 
     int value;
-    int*next;
-    int*prev;
+    node_double*next;
+    node_double*prev;
 };
