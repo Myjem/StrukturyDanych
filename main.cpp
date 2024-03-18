@@ -52,6 +52,6 @@ int main()
     for(int i=0;i<tab.get_size();i++) cout<<tab.get(i)<<" ";
     cout<<endl<<"capacity: "<<tab.get_capacity()<<endl;
     cout<<"size: "<<tab.get_size()<<endl;
-    cout<<tab.search(80);
+    cout<<tab.search(20);
     return 0;
 }
