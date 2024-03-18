@@ -37,7 +37,8 @@ void ArrayList::push_back(int data) {
     tab[size-1]=data;
 }
 
-void ArrayList::del_back(int data) {
+void ArrayList::del_back() {
+    tab[size-1]=0;
     size--;
     resize();
 

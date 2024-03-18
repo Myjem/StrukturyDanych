@@ -1,8 +1,9 @@
 #ifndef MAIN_CPP_ARRAYLIST_H
 #define MAIN_CPP_ARRAYLIST_H
+#include<iostream>
 class ArrayList{
 private:
-    int*tab;
+    int*tab = NULL;
     int size;
     int capacity;
 public:
@@ -10,9 +11,9 @@ public:
     ArrayList(int s);
     void append(int i,int data);
     void push_back(int data);
-    void del_back(int data);
+    void del_back();
     void push_front(int data);
-    void del_front(int data);
+    void del_front();
     void del(int i, int data);
     int search(int data);
     void resize();

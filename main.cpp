@@ -28,6 +28,11 @@ int main()
     cout<<endl<<"capacity: "<<tab.get_capacity()<<endl;
     cout<<"size: "<<tab.get_size()<<endl;
 
+    tab.del_back();
+    for(int i=0;i<tab.get_size();i++) cout<<tab.get(i)<<" ";
+    cout<<endl<<"capacity: "<<tab.get_capacity()<<endl;
+    cout<<"size: "<<tab.get_size()<<endl;
+
 
     return 0;
 }
