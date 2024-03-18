@@ -3,22 +3,22 @@
 
 using namespace std;
 
-ArrayList::ArrayList() : tab(new int[4]),size(0),capacity(4){};
+ArrayList::ArrayList() : tab(new int[4]),size(0),capacity(4){};//constructor without argument (tab with 4 slots)
 
-ArrayList::ArrayList(int s) : tab(new int[s]),size(0),capacity(s){};
+ArrayList::ArrayList(int s) : tab(new int[s]),size(0),capacity(s){};//constructor with argument
 
 void ArrayList::resize() {
-    if(size>=capacity){
+    if(size>=capacity){//size up
         capacity*=2;
         int*temp=new int[capacity];
-        for(int i=0;i<size;i++) temp[i]=tab[i];
+        for(int i=0;i<size;i++) temp[i]=tab[i];//coping old tab to new tab
         delete[] tab;
         tab=temp;
     }
-    if(size<floor(0.5*capacity)){
+    if(size<floor(0.5*capacity)){//size down
         capacity=floor(0.5*capacity);
         int*temp=new int[capacity];
-        for(int i=0;i<size;i++) temp[i]=tab[i];
+        for(int i=0;i<size;i++) temp[i]=tab[i];//coping old tab to new tab
         delete[] tab;
         tab=temp;
     }
@@ -51,6 +51,26 @@ void ArrayList::del_back() {
 
 }
 
+void ArrayList::push_front(int data) {
+    size++;
+    resize();
+    for(int i=size-1;i>0;i--) tab[i]=tab[i-1];
+    tab[0]=data;
+}
+
+void ArrayList::del_front() {
+    for(int i=0;i<size-1;i++) tab[i]=tab[i+1];
+    tab[size-1]=0;
+    size--;
+    resize();
+}
+
+int ArrayList::search(int data) {
+    for(int i=0;i<size;i++){
+        if(tab[i]==data) return i;
+    }
+}
+
 int ArrayList::get(int i){
     return tab[i];
 }
@@ -67,6 +87,6 @@ void ArrayList::set(int i, int data) {
     tab[i]=data;
 }
 
-ArrayList::~ArrayList() {
+ArrayList::~ArrayList() {//destructor with deleting tab memory
     delete[] tab;
 }
