@@ -31,6 +31,13 @@ void ArrayList::append(int i, int data) {
     tab[i]=data;
 }
 
+void ArrayList::del(int i) {
+    for(int j=i;j<size;j++) tab[j]=tab[j+1];
+    tab[size-1]=0;
+    size--;
+    resize();
+}
+
 void ArrayList::push_back(int data) {
     size++;
     resize();

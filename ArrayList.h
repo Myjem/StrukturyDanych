@@ -14,7 +14,7 @@ public:
     void del_back();
     void push_front(int data);
     void del_front();
-    void del(int i, int data);
+    void del(int i);
     int search(int data);
     void resize();
     int get(int i);
