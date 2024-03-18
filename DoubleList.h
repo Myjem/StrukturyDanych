@@ -7,12 +7,12 @@ private:
 public:
     DoubleList();
     DoubleList(int s);
-    void Append(int i,int data);
-    void PushBack(int data);
-    void DelBack(int data);
-    void PushFront(int data);
-    void DelFront(int data);
-    void Del(int i, int data);
-    int Search(int i);
+    void append(int i,int data);
+    void push_back(int data);
+    void del_back(int data);
+    void push_front(int data);
+    void del_front(int data);
+    void del(int i, int data);
+    int search(int data);
     ~DoubleList();
 };
