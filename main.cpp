@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "ArrayList.h"
 #include "SingleListHead.h"

@@ -3,7 +3,7 @@
 #include<iostream>
 class ArrayList{
 private:
-    int*tab=NULL;
+    int*tab = NULL;
     int size;
     int capacity;
 public:
@@ -24,3 +24,4 @@ public:
     ~ArrayList();
 };
 #endif
+
