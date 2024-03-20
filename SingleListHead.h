@@ -1,13 +1,13 @@
 #ifndef MAIN_CPP_SINGLELISTHEAD_H
 #define MAIN_CPP_SINGLELISTHEAD_H
 #include "node_single.h"
+#include <iostream>
 class SingleListHead{
 private:
-    node_single*head;
-    int size;
+    node_single*head=NULL;
+    int size=0;
 public:
     SingleListHead();
-    SingleListHead(int s);
     void append(int i,int data);
     void push_back(int data);
     void del_back();
@@ -15,6 +15,8 @@ public:
     void del_front();
     void del(int i);
     int search(int data);
+    int get(int i);
+    int get_size();
     ~SingleListHead();
 
 };
