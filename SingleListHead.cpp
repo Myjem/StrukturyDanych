@@ -84,14 +84,14 @@ void SingleListHead::del(int i) {
      return old->value;
 }
 
-int SingleListHead::search(int data) {
-    if(head==NULL) return -1;
+node_single* SingleListHead::search(int data) {
+    if(head==NULL) return nullptr;
     node_single*searched=head;
     for(int j=0;j<size;j++){
-        if(searched->value==data) return j;
+        if(searched->value==data) return searched;
         searched=searched->next;
     }
-    return -1;
+    return nullptr;
 }
 
 int SingleListHead::get_size() {
