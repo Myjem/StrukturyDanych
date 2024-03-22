@@ -2,20 +2,19 @@
 #define MAIN_CPP_SINGLELISTHT_H
 class SingleListHT{
 private:
-    node_single*head;
-    node_single*tail;
+    node_single*head = nullptr;
+    node_single*tail = nullptr;
     int size;
 public:
     SingleListHT();
-    SingleListHT(int s);
-    void append(int i,int data);
-    void push_back(int data);
-    void del_back();
+    void append(int i,int data);  //TODO
+    void push_back(int data); 
+    void del_back();  //TODO
     void push_front(int data);
     void del_front();
-    void del(int i);
-    int search(int data);
-    ~SingleListHT();
+    void del(int i);  //TODO
+    int search(int data);  //TODO
+    ~SingleListHT();   //TODO
 };
 
 #endif
