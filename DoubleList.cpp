@@ -113,26 +113,26 @@ void DoubleList::append(int i, int data)
         node_double* node = head;
         for(int j = 0; j < i-1; j++)
         {
-            node = node->next;    //ważne: Tworzymy nowy node PRZED tym który wskazuje node (dając  i=3, tworzymy node w trzecim miejscu, ale jego index tego node to 2 bo liczymy od 0)
-        }                               //UPDATE: pomieszałem sie z tymi indexami ide zrobic przerwe XDDDDDD
+            node = node->next;              //ważne: Tworzymy nowy node PRZED tym który wskazuje 'node' (dając  i=3, tworzymy node na czwartym miejscu, ale jego index tego node to 3 bo liczymy od 0)
+        }                               
         newnode->value = data;
         newnode->next = node->next;
         node->next->prev = newnode;
         node->next = newnode;
-        newnode->prev = node;            // uhhhhhhhhhhhhhh mam nadzieje ze to jest dobrze lol
+        newnode->prev = node;            
     }
     else
     {
         node_double* node = tail;
         for(int j = size - 1; j > i; j--)
         {
-            node = node->prev;     //Z TEGO CO WIDZE TO JEST ŹLE, NODE SIE TWORZY ALE NA ZŁYM INDEXIE, POPRAWIE TO JUTRO
+            node = node->prev;   
         }
         newnode->value = data;
         newnode->prev = node->prev;
         newnode->next = node;
         node->prev->next = newnode;
-        node->prev = newnode;    //tu tez mam nadzieje xd (ale jak rysowalem w paincie to bylo git)
+        node->prev = newnode;           //Tworzymy nowy node ZA tym na który wskazuje 'node'(i=6 to index nowego node, ale przez to ze liczymy od 0, jest to 7 node w kolejnosci)
     }
     size++;
 }
@@ -158,8 +158,8 @@ void DoubleList::del(int i)
         node_double* node = head;
         for (int j = 0; j < i; j++)
         {
-            node = node->next;      //ważne: USUWAMY TEN NA KTÓRY WSKAZUJE 'NODE'
-        }
+            node = node->next;      //usuwamy ten node na który wskazuje wskaźnik
+        }                           // jeśli i=6 to usuwamy node z indexem 6. (7 node od początku)
         node->prev->next = node->next;
         node->next->prev = node->prev;
         delete node;
@@ -170,8 +170,8 @@ void DoubleList::del(int i)
         node_double* node = tail;
         for(int j = size - 1; j > i; j--)
         {   
-            node = node->prev;                                          //mam nadzieje że te indexy są poprawne ale jak wcześniej sprawdze to juz jutro ig
-        }                                                               
+            node = node->prev;                                          
+        }                                                                
         node->prev->next=node->next;
         node->next->prev=node->prev;
         delete node;
@@ -190,4 +190,3 @@ void DoubleList::print_data()
     }
     return;
 }
-//czemu to sie nie chce zpushowac?
