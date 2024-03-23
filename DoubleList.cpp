@@ -190,3 +190,10 @@ void DoubleList::print_data()
     }
     return;
 }
+
+DoubleList::~DoubleList() {
+    while (head != nullptr)
+    {
+        del_front();
+    }
+}
