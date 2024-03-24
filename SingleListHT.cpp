@@ -83,7 +83,7 @@ node_single* SingleListHT::search(int data)
 {
     if (head == nullptr)
     {
-        return;
+        return nullptr;
     }
     node_single* node = head;
     for(int i; i < size; i++)
@@ -94,7 +94,7 @@ node_single* SingleListHT::search(int data)
         }
         node = node->next;
     }
-    return nullptr;
+    return node;
 }
 
 void SingleListHT::append(int i, int data)

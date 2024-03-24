@@ -1,4 +1,5 @@
 #include "node_double.h"
+#include<iostream>
 
 class DoubleList{
 private:

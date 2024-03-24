@@ -91,7 +91,7 @@ node_single* SingleListHead::search(int data) {
         if(searched->value==data) return searched;
         searched=searched->next;
     }
-    return nullptr;
+    return searched;
 }
 
 int SingleListHead::get_size() {

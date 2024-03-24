@@ -73,5 +73,6 @@ int main()
     cout<<endl;
     for(int i=0;i<List.get_size();i++) cout<<List.get(i)<<" ";*/
     cout<<endl;
-    cout<<List.search(1230);
+    //List.~SingleListHead();
+    return(0);
 }
