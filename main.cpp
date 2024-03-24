@@ -3,6 +3,7 @@
 #include "SingleListHead.h"
 #include "SingleListHT.h"
 #include "DoubleList.h"
+#include "UI.h"
 
 using namespace std;
 
@@ -51,7 +52,7 @@ int main()
     for(int i=0;i<tab.get_size();i++) cout<<tab.get(i)<<" ";
     cout<<endl<<"capacity: "<<tab.get_capacity()<<endl;
     cout<<"size: "<<tab.get_size()<<endl;
-    cout<<tab.search(20);*/
+    cout<<tab.search(20);
     SingleListHead List;
     List.push_front(10);
     List.push_front(20);
@@ -66,13 +67,14 @@ int main()
     List.append(1,999);
     cout<<endl;
     for(int i=0;i<List.get_size();i++) cout<<List.get(i)<<" ";
-    /*List.del_back();
+    List.del_back();
     cout<<endl;
     for(int i=0;i<List.get_size();i++) cout<<List.get(i)<<" ";
     List.del(1);
     cout<<endl;
-    for(int i=0;i<List.get_size();i++) cout<<List.get(i)<<" ";*/
+    for(int i=0;i<List.get_size();i++) cout<<List.get(i)<<" ";
     cout<<endl;
-    //List.~SingleListHead();
+    List.~SingleListHead();*/
+    Ui();
     return(0);
 }

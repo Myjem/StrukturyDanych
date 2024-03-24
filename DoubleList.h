@@ -1,3 +1,5 @@
+#ifndef MAIN_CPP_DOUBLE_LIST_H
+#define MAIN_CPP_DOUBLE_LIST_H
 #include "node_double.h"
 #include<iostream>
 
@@ -18,3 +20,4 @@ public:
     void print_data();
     ~DoubleList();
 };
+#endif
